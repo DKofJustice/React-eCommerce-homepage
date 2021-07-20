@@ -1,0 +1,340 @@
+:root {
+  --main-bg-color: #F6F6F6;
+  --secondary-bg-color: #A4DEC7;
+  --btn-color: #5430CF;
+  --second-menu-color: #454545;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+h1, h2, h3, p {
+  font-family: "PlayfairDisplay";
+  word-spacing: 3px;
+}
+
+.container, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+  overflow-x: hidden;
+}
+
+/*Header Styling*/
+
+header {
+  width: 100vw;
+  height: 4em;
+  background-color: white;
+  padding-inline: 1em;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header .titleLogo {
+  position: absolute;
+  left: calc(50% - 1.5em);
+  color: black;
+}
+
+header > *:nth-child(3) {
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+header > *:last-child {
+  margin-right: 1em;
+}
+
+.header img {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+}
+
+/*Search Bar styling*/
+
+.search-bar-div {
+  width: 100%;
+  height: 4em;
+  position: fixed;
+  z-index: 11;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.search-bar-div input {
+  width: 60%;
+  height: 3em;
+  border-radius: 20px;
+  border: 2px solid var(--secondary-bg-color);
+  padding-inline: 2em;
+}
+
+/*Side-menu styling*/
+
+.side-menu {
+  width: 70vw;
+  height: 100vh;
+  position: fixed;
+  left: -70vw;
+  background-color: #454545;
+  z-index: 10;
+  padding-inline: 1em;
+  padding-block: 1em;
+}
+
+.side-menu-show {
+  animation-name: sideSlideOut;
+  animation-duration: 0.3s;
+  left: 0;
+}
+
+@keyframes sideSlideOut {
+  from {
+    left: -70vw;
+  }
+
+  to{
+    left: 0;
+  }
+}
+
+.side-menu-hide {
+  animation-name: sideSlideIn;
+  animation-duration: 0.3s;
+}
+
+@keyframes sideSlideIn {
+  from {
+    left: 0;
+  }
+
+  to{
+    left: -70vw;
+  }
+}
+
+.side-menu .top-icons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.side-menu .top-icons img {
+  width: 2em;
+  height: 2em;
+}
+
+#hamBtn {
+  cursor: pointer;
+}
+
+.top-icons #accountIcon {
+  width: 4em;
+  height: auto;
+  position: absolute;
+  left: 9em;
+}
+
+.side-menu-list {
+  width: 40vw;
+  height: auto;
+  margin-inline: auto;
+  margin-block: 7em;
+  color: darkgrey;
+  line-height: 4em;
+}
+
+.side-menu-list h2 {
+  cursor: pointer;
+}
+
+.side-menu-list h2:hover {
+  color: #A4DEC7;
+}
+
+/*Landing Page Styling*/
+
+.homepage-mobile {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.homepage-mobile > h2 {
+  margin-block: 5em;
+  text-align: center;
+}
+
+.homepage-mobile img {
+  width: 40em;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+  top: 35%;
+}
+
+.homepage-mobile > h2:nth-child(2) {
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.ProductPageLink {
+  width: 14em;
+  height: 3.5em;
+  border: none;
+  border-radius: 2em;
+  background-color: var(--btn-color);
+  color: white;
+  margin-block: 7em;
+  cursor: pointer;
+}
+
+.ProductPageLink:hover {
+  background-color: #9C82F3;
+}
+
+/*Favorites Section Styling*/
+
+.favorites-mobile {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-inline: 1em;
+}
+
+.favorites-mobile > * {
+  margin-top: 5em;
+}
+
+.product-slider {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 6em;
+}
+
+.product-icon {
+  background-color: var(--secondary-bg-color);
+  width: auto;
+  height: 20em;
+  border-radius: 1.5em;
+  margin-inline: 2em;
+  padding-inline: 1em;
+  padding-top: 3em;
+}
+
+.product-icon img {
+  width: 10em;
+  height: auto;
+}
+
+.product-icon p {
+  margin-top: 4em;
+  font-weight: 1000;
+}
+
+/*Footer Styling*/
+
+.footer-mobile {
+  width: 100%;
+  height: auto;
+  background-color: var(--second-menu-color);
+  padding-inline: 2em;
+  padding-top: 5em;
+  padding-bottom: 2em;
+}
+
+.footer-mobile > * {
+  margin-bottom: 3em;
+}
+
+.footer-mobile > *:last-child {
+  margin-bottom: 0;
+}
+
+.links-div {
+  width: min(100%, 40em);
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+  column-gap: 2em;
+  margin-inline: auto;
+  line-height: 2.5em;
+}
+
+.links-div a, h1{
+  color: darkgrey;
+}
+
+.links-div a:hover {
+  color: #A4DEC7;
+}
+
+.contact-form #email {
+  width: 18em;
+  height: 2.5em;
+  border: none;
+  margin-bottom: 2em;
+}
+
+.contact-form #email-message {
+  width: 18em;
+  height: 10em;
+  border: none;
+}
+
+.madeByText {
+  width: 8em;
+  margin-inline: auto;
+}
+
+@media (min-width: 1366px) {
+  .header {
+    padding-inline: 24em;
+  }
+
+  .side-menu {
+    width: 20vw;
+  }
+
+  .side-menu .top-icons #accountIcon {
+    left: 10em;
+  }
+
+  .side-menu-list {
+    margin-left: 3em;
+    margin-top: 13em;
+  }
+}

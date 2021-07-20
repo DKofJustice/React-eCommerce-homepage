@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44">
+  <g id="Hamburger_Menu" data-name="Hamburger Menu" transform="translate(-2 -3)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="8" cy="8" r="8" transform="translate(2 3)"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="8" cy="8" r="8" transform="translate(31 3)"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="8" cy="8" r="8" transform="translate(31 31)"/>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="8" cy="8" r="8" transform="translate(2 31)"/>
+  </g>
+</svg>
